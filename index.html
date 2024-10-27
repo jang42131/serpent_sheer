@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Centered</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="centered">
+        <img src="sheer.jpeg" alt="sheer" id="image">
+        <audio id="audio" src="news.mp3" autoplay loop></audio>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const image = document.getElementById('image');
+
+        // 이미지 클릭 시 재생/일시정지 토글
+        image.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+</html>
